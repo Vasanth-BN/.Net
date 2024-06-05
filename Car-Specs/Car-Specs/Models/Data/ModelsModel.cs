@@ -7,7 +7,7 @@ namespace Car_Specs.Models.Data
     {
 
         [BsonElement("modelId")]
-        public string ModelId { get; set; }
+        public string? ModelId { get; set; }
 
         [BsonElement("brandId")]
         public string? BrandId { get; set; }

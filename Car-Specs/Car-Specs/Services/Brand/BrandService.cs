@@ -6,6 +6,7 @@ namespace Car_Specs.Services.Brand
 {
     public class BrandService : IBrandService
     {
+        //Will Change after implementation
         IDatabaseContext _databaseContext;
 
         public BrandService(IDatabaseContext databaseContext)
