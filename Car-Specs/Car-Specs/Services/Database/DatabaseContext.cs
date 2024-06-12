@@ -1,9 +1,9 @@
-﻿using Car_Specs.Models.Configuration;
-using Car_Specs.Models.Data;
+﻿using CarSpecs.Models.Configuration;
+using CarSpecs.Models.Data;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 
-namespace Car_Specs.Services.Database
+namespace CarSpecs.Services.Database
 {
     public class DatabaseContext : IDatabaseContext
     {

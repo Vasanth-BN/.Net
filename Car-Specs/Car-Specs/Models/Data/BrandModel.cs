@@ -1,28 +1,28 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson;
 
-namespace Car_Specs.Models.Data
+namespace CarSpecs.Models.Data
 {
     public class BrandModel
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string? Id { get; set; }
+        public string Id { get; set; }
 
         [BsonElement("brandName")]
-        public string? BrandName { get; set; }
+        public string BrandName { get; set; }
 
         [BsonElement("brandBg")]
-        public ImageModel? BrandBg { get; set; }
+        public ImageModel BrandBg { get; set; }
 
         [BsonElement("description")]
-        public string? Description { get; set; }
+        public string Description { get; set; }
 
         [BsonElement("brandLogo")]
-        public ImageModel? BrandLogo { get; set; }
+        public ImageModel BrandLogo { get; set; }
 
         [BsonElement("models")]
-        public List<ModelsModel>? Models { get; set; }
+        public List<ModelsModel> Models { get; set; }
 
     }
 

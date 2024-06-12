@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <RootNamespace>Car_Specs.Test</RootNamespace>
+    <RootNamespace>CarSpecs.Test</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 
@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Car-Specs\Car-Specs.csproj" />
+    <ProjectReference Include="..\Car-Specs\CarSpecs.csproj" />
   </ItemGroup>
 
   <ItemGroup>

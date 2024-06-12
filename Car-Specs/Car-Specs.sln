@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Car-Specs", "Car-Specs\Car-Specs.csproj", "{2A0AA3C6-5B1B-4111-BE4D-3D27C83E5D6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarSpecs", "Car-Specs\CarSpecs.csproj", "{2A0AA3C6-5B1B-4111-BE4D-3D27C83E5D6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Car-Specs.Test", "Car-Specs.Test\Car-Specs.Test.csproj", "{F6C04D6B-557A-4035-A183-9DB7AFB3599D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Car-Specs.Test", "Car-Specs.Test\Car-Specs.Test.csproj", "{F6C04D6B-557A-4035-A183-9DB7AFB3599D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

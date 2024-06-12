@@ -1,9 +1,11 @@
-﻿using Car_Specs.Services.Brand;
+﻿using CarSpecs.Models.Api;
+using CarSpecs.Models.Data;
+using CarSpecs.Services.Brand;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Car_Specs.Controllers
+namespace CarSpecs.Controllers
 {
-    [Route("/")]
+    [Route("/carSpecs/brands")]
     [ApiController]
     public class BrandController : ControllerBase
     {
@@ -13,11 +15,31 @@ namespace Car_Specs.Controllers
             _brandService = brandService;
         }
 
-        [HttpGet("brands")]
+        [HttpGet]
         public async Task<IActionResult> GetAllBrands()
-        {   
+        {
             var brands = await _brandService.getAllBrands();
             return Ok(brands);
+        }
+        [HttpGet("/{brandId}")]
+        public async Task<IActionResult> GetBrandById(string brandId)
+        {
+            var brand = await _brandService.getBrandById(brandId);
+            return brand == null ? NotFound() : Ok(brand);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CreateBrand(BrandDTO brandDTO)
+        {
+            var brand = await _brandService.createBrand(brandDTO);
+            return brand == null ? NotFound() : CreatedAtAction(nameof(brand), new { id = brand.Id }, brand);
+        }
+
+        [HttpDelete("/{brandId}")]
+        public async Task<IActionResult> DeleteBrand(string id)
+        {
+            var count = await _brandService.deleteBrand(id);
+            return count == 0 ? NotFound() : Ok(count);
         }
     }
 }

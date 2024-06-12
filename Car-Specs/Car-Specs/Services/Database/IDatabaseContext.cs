@@ -1,7 +1,7 @@
-﻿using Car_Specs.Models.Data;
+﻿using CarSpecs.Models.Data;
 using MongoDB.Driver;
 
-namespace Car_Specs.Services.Database
+namespace CarSpecs.Services.Database
 {
     public interface IDatabaseContext
     {

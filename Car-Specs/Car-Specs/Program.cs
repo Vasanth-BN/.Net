@@ -1,14 +1,12 @@
-using Car_Specs.Models.Configuration;
-using Car_Specs.Services.Brand;
-using Car_Specs.Services.Database;
+using CarSpecs.Models.Configuration;
+using CarSpecs.Services.Brand;
+using CarSpecs.Services.Database;
 using MongoDB.Driver;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<IDatabaseContext, DatabaseContext>();
@@ -19,9 +17,9 @@ builder.Services.AddSingleton<IMongoClient>(_ =>
     var connectionString = builder.Configuration.GetSection("ConnectionStrings:ConnectionUrl").Value;
     return new MongoClient(connectionString);
 });
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

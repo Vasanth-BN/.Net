@@ -1,13 +1,13 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
 
-namespace Car_Specs.Models.Data
+namespace CarSpecs.Models.Data
 {
     public class ImageModel
     {
         [BsonElement("altText")]
-        public string? AltText { get; set; }
+        public string AltText { get; set; }
 
         [BsonElement("src")]
-        public string? Src { get; set; }
+        public string Src { get; set; }
     }
 }
