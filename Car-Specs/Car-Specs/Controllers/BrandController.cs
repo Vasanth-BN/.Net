@@ -1,12 +1,13 @@
 ﻿using CarSpecs.Models.Api;
-using CarSpecs.Models.Data;
 using CarSpecs.Services.Brand;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CarSpecs.Controllers
 {
     [Route("/carSpecs/brands")]
     [ApiController]
+    [Authorize]
     public class BrandController : ControllerBase
     {
         private readonly IBrandService _brandService;
